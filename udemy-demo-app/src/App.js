@@ -1,19 +1,32 @@
 import React from "react";
 
+// ファンクショナルコンポーネント
 // function App() {
-//   const greeting = "Hi Tom!";
-//   const dom = <h1 className="foo">{greeting}</h1>
-//   return dom;
+//   return(
+//     <div>
+//         <input type="text" onClick={() => {console.log("Click!")}} />
+//         <label htmlFor="bar" ht="true">bar</label>
+//         <input type="text" onChange={() => {console.log("Change!")}} />
+//     </div>   
+//   )
 // }
 
-function App() {
+// 以下は関数コンポーネントの練習
+const App = () => {
   return(
     <div>
-        <input type="text" onClick={() => {console.log("Click!")}} />
-        <label htmlFor="bar" ht="true">bar</label>
-        <input type="text" onChange={() => {console.log("Change!")}} />
-    </div>   
-  )
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+    </div>
+  ) 
 }
+
+const Cat = () => {
+  return <div>Meow!</div>
+}
+
+
 
 export default App;
