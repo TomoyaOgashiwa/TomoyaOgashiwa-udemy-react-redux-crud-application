@@ -1,14 +1,23 @@
+import { render } from "@testing-library/react";
 import React from "react";
 
 function App() {
   return (
-    <div>
-        <p>
+    <h1>
           {/* Edit <code>src/App.js</code> and save to reload. */}
           Hello World!
-        </p>
-    </div>
+    </h1>
   );
 }
+
+// 上記と同じ処理 上記がJSX、下記がJavaScriptで表示したもの
+// function App() {
+//   render();
+//   return React.createElement(
+//     "div",
+//     null,
+//     "Hello World!!!!"
+//   );
+// }
 
 export default App;
