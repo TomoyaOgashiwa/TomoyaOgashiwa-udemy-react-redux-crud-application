@@ -11,11 +11,13 @@ import reportWebVitals from './reportWebVitals';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from "redux-devtools-extension";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const enhancer = process.env.NODE_ENV === "development" ? composeWithDevTools(applyMiddleware(thunk)) : applyMiddleware(thunk)
 const store = createStore(reducer, enhancer)
 
 ReactDOM.render(
+  <MuiThemeProvider>
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
@@ -25,7 +27,8 @@ ReactDOM.render(
         <Route exact path="/events" component={EventsIndex}/>
       </Switch>
     </BrowserRouter>
-  </Provider>,
+  </Provider>
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
